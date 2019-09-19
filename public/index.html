@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- mdbootstrap css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
+    <!-- my css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<video autoplay muted loop id="video">
+    <source src="/travelVideo.mp4" type="video/mp4">
+</video>
+
+<div class="container mb-0">
+    <div class="titleDiv">
+        <h1 class="ml12">Log Your Next Adventure</h1>
+    </div>
+
+
+    <div class="card">
+        <!-- <h5 class="card-title">Log In</h5> -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="bluetext nav-link active" id="login-tab" data-toggle="tab" href="#home" role="tab" aria-controls="login"
+                   aria-selected="true">Log In</a>
+            </li>
+            <li class="nav-item">
+                <a class="bluetext nav-link" id="signup-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="signup"
+                   aria-selected="false">Sign Up</a>
+            </li>
+        </ul>
+        <div class="card-body">
+            <div class="logindiv tab-content" id="myTabContent">
+                <!-- Login here -->
+                <div class="loginElements tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <!-- Form for Login -->
+                    <form action="/login" method="post">
+                        <!-- Username -->
+                        <label for="usernameLogIn">Your Username Please *</label>
+                        <input type="text" id="usernameLogIn" name ="username" class="loginElements form-control mb-4" placeholder="reallcoolusername" required>
+                        <!-- Password -->
+                        <label for="passwordLogIn">And your Super Secret Password *</label>
+                        <input type="password" id="passwordLogIn" name="password" class="loginElements form-control mb-4" placeholder="supersecretpassword" required>
+                        <div class="d-flex justify-content-around">
+                            <!-- Remember me -->
+                            <div class="loginElements custom-control custom-checkbox">
+                                <input type="checkbox" class="loginElements custom-control-input" id="rememberCheck">
+                                <label class="loginElements custom-control-label" for="rememberCheck">Remember me</label>
+                            </div>
+                        </div>
+
+                        <!-- Sign in button -->
+                        <button id="btnLogIn" class="loginElements btn btn-info btn-block my-4" type="submit" name="Log In">Log in</button>
+
+                        <!-- Register -->
+                        <p>Not a member?
+                            <a class="bluetext" href="">Register</a>
+                        </p>
+
+                        <!-- Social login -->
+                        <p>or sign in with:</p>
+                        <div class="loginElements iconContainer">
+                            <a class="btn-link mx-2 fa-lg"  href="/auth/linkedin">
+                                <i class="bluetext fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn-link mx-2 fa-lg" href="/auth/github">
+                                <i class="bluetext fab fa-github"></i>
+                            </a>
+                        </div>
+                    </form>
+
+                </div>
+                <!--SIGNUP HERE-->
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <form>
+                        <!--First Name -->
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" class="loginElements form-control mb-4" placeholder="What's your first name?" required>
+
+                        <!-- Last Name -->
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" class="loginElements form-control mb-4" placeholder="What's your last name?" required>
+
+                        <!-- Email -->
+                        <label for="usernameSignUp">Pick a Username *</label>
+                        <input type="text" id="usernameSignUp" class="loginElements form-control mb-4" placeholder="reallycooluser" required>
+
+                        <!-- Password -->
+                        <label id="authLabel" for="passwordSignUp">And your Super Secret Password *</label>
+                        <input type="password" id="passwordSignUp" class="loginElements form-control mb-4" placeholder="supersecretpassword" required>
+
+                        <!-- Repeat Password -->
+                        <label for="passwordSignUpRepeat">One more time to make sure you wrote the right thing *</label>
+                        <input type="password" id="passwordSignUpRepeat" class="loginElements form-control mb-4" placeholder="supersecretpassword" required>
+
+                        <!-- Sign in button -->
+                        <button id="btnSignUp" class="loginElements btn btn-info btn-block my-4" type="submit">Sign Up</button>
+
+                        <!-- Social login -->
+                        <p>or sign in with:</p>
+                        <div class="loginElements iconContainer">
+                            <a class="btn-link mx-2 fa-lg" href="/auth/linkedin">
+                                <i class="bluetext fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn-link mx-2 fa-lg" href="/auth/github">
+                                <i class="bluetext fab fa-github"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- anime js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!-- boostrap js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- mdbootstrap js -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
+
+<!--use body-parser middleware for express JSON db handling-->

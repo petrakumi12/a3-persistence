@@ -1,74 +1,49 @@
 Assignment 3 - Persistence: Two-tier Web Application with Flat File Database, Express server, and CSS template
 ===
 
-Due: September 16th, by 11:59 AM.
+## What's Your Next Adventure?
 
-This assignnment continues where we left off, extending it to use the most popular Node.js server framework (express), a flat file database suitable for small applications (lowdb), and a CSS application framework / template of your choice (Boostrap, Material Design, Semantic UI, Pure etc.)
+http://a3-petrakumi.glitch.me
 
+This website helps people log their trips for recordkeeping 
 
-Baseline Requirements
----
-
-Your application is required to implement the following functionalities:
-
-- a `Server`, created using Express (no alternatives will be accepted for this assignment)
-- a `Results` functionality which shows the entire dataset residing in the server's memory
-- a `Form/Entry` functionality which allows users to add, modify, and delete data items (must be all three!) associated with their user name / account.
-- Use of at least five [Express middleware packages](https://expressjs.com/en/resources/middleware.html). Explore! 
-- Basic authentication using the [Passport middleware](http://www.passportjs.org) for Express (this counts as one of your five middleware packages). We encourage using the Local strategy, but OAuth (Open Authentication) can also be used for additional technical achievement. The course staff cannot help you with the various flavors of OAuth strategies. YOU MUST PROVIDE US WITH ACCOUNT CREDENTIALS TO LOGIN TO YOUR APPLICATION IF YOU USE OAUTH. The course staff cannot be expected to have credentials for any particular OAuth service.
-- Persistent data storage in between server sessions. [lowdb](https://github.com/typicode/lowdb) is a suitable database package for this assignment and will be discussed in class.
-- Use of a [CSS framework or template](https://github.com/troxler/awesome-css-frameworks). This should do the bulk of your styling/CSS for you and be appropriate to your application. For example, don't use [NES.css](https://nostalgic-css.github.io/NES.css/) (which is awesome!) unless you're creating a game or some type of retro 80s site.
-
-Your application is required to demonstrate the use of the following concepts:
-
-HTML:
-- HTML input tags and form fields of various flavors (`<textarea>`, `<input>`, checkboxes, radio buttons etc.)
-- HTML that can display all data *for a particular authenticated user*. Note that this is different from the last assignnment, which required the display of all data in memory on the server.
-
-Note that it might make sense to have two simple pages for this assignment, one that handles login / authentication, and one that contains the rest of your application. For this assignment, it is acceptable to simply create new user accounts upon login if none exist, however, you must alert your users to this fact. If you're not using OAuth 
-
-CSS:
-- CSS styling should primarily be provided by your chosen template/framework. Oftentimes a great deal of care has been put into designing CSS templates; don't override their stylesheets unless you are extremely confident in your graphic design capabilities. The idea is to use CSS templates that give you a professional looking design aesthetic without requiring you to be a graphic designer yourself.
-
-JavaScript:
-- At minimum, a small amount of front-end JavaScript to get / fetch data from the server. See the [previous assignment](https://github.com/cs4241-19a/a2-shortstack) for reference.
-
-Node.js:
-- A server using Express, at least five pieces of Express middleware, and a persistent database (a flat file using lowdb is great).
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements. A good potential starting point is to use the "hello-express" project template inside of Glitch; this appears as an option when you hit the "New Project" button. Use the work you did in the last assignment as a reference to implement functionality, as well as the notes from class on 9/9 and 9/12.
-2. If you developed your project locally, deploy your project to Glitch, and fill in the appropriate fields in your package.json file.
-3. Test your project to make sure that when someone goes to your main page on Glitch, it displays correctly.
-4. Ensure that your project has the proper naming scheme `a3-yourname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. You do not need to include any of your project files in this repo (we will see those on Glitch), you only need to update and commit thhe README file.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a2-gitname-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your glitch link e.g. http://a3-charlieroberts.glitch.me
-
-Include a very brief summary of your project here. Images are encouraged, along with concise, high-level text. Be sure to include:
-
-- the goal of the application
-- challenges you faced in realizing the application
-- what authentication strategy / database you chose to use and why (choosing one because it seemed the easiest to implement is perfectly acceptable)
-- what CSS framework you used and why.
-  - include any modifications to the CSS framework you made via custom CSS you authored.
+- the goal of the application is to offer users an easy to use interface to add/remove/modify their trips
+- after struggling with integrating lowdb, express, and passport, the biggest challenge was creating a JSON object dynamically that contains the information needed to add it to the map. The JSON object would log just fine, but when I tried to get any attribute from it it would reult as being empty. I was unable to solve this problem with the time I was given for this homework.
+- I chose to implement passport and lowdb as lowdb seemed like the easiest option for a small database, and we had guiding code from prof. Roberts about Passport which I found particularly helpful to get started with especially as a complete stranger to express, passport, and lowdbchoosing one because it seemed the easiest to implement is perfectly acceptable)
+- I used mdb bootstrap for the login screen as I liked its design and ease of use, and getBootstrap for the submission form after authentication as I had it before and didn't want to change it
+    - Changes I made to the login screen:
+        - I changed the background color of the form and login/signup tabs
+        - Changed how the tabs reacted on hover, on click, and when they were activated
+    - Changes I made to the form after logging in
+        - Change size of the buttons
+        - Change text size and color for both labels and inputs
+        - Changed default colors when autocomplete was used
+        - Changed some of the layouts of the boxes
 - the five Express middleware packages you used and a short (one sentence) summary of what each one does.
+- Middleware I used:
+     - bodyParser: parses requests so user can easily get request body without having to call JSON.parse()
+     - express.static: serves static files more easily from a given directory
+     - flash: stores messages that are then sent to the user usually when the user gets redirected
+     - session: stores and creates sessions for users who are authenticated
+     - passport: authenticates users based ont heir login info
 
-## Technical Achievements
-- **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
-- **Tech Achievement 2**: I used over ten Express middleware packages, enabling me to create a server that...
+## Technical - Achievements
+- **Tech Achievement 1**: OAuth authentication via the GitHub strategy
+- **Tech Achievement 2**: OAuth authentication via the LinkedIn strategy
+- **Tech Achievement 3**: Google's Place search API to find the right name of a place given what the user inputted
+** The last achievement was done as part of generating locations to put on the map, but although I was able to generate the locations and store them in an appropriately formatted JSON, I could never figure out how to pass that JSON to the map I was using, so you would not be able to see the result unless you look at the logs
+
+
 
 ### Design/Evaluation Achievements
-- **Design Achievement 1**: I tested my application using screen reading software, and found that...
-- **Design Achievement 2**: I followed best practices for accessibility, including providing alt attributes for images and using semantic HTML. There are no `<div>` or `<span>` elements in my document.
-- **Design Achievement 3**: We tested the application with n=X users, finding that...
+- **Design Achievement 1**: Login screen smooth changing of tabs that looks like the body of the form is the same as the tab itself
+- **Design Achievement 2**: Included a map to show all the places people submit
+- **Design Achievement 3**: Dynamically generated table from the infromation stored on the database
+- **Design Achievement 4**: Dynamically modified table/deleted row from the information that was given
+- **Design Achievement 5**: Customized CSS for bootstrap in the login page, the form within the user's page, and the dynamically generated table
+- **Design Achievement 6**: 
+
+## Notes
+- To log in to see a sample populated account, use these credentials: username: petrakumi, pass: petra
+- The locations on the map are only sample locations to demonstrate how it would work
+- I had misunderstood the deadline as being 11:59 pm for this homework, which is why I did not submit on time. I hope this will not negatively affect my grade.

@@ -1,0 +1,78 @@
+{
+  "travels": [
+    {
+      "username": "petrakumi",
+      "id": "3Z7WXbL",
+      "placeFrom": "Boston",
+      "placeTo": "worcester ma",
+      "mode": "walking",
+      "returnval": "No",
+      "distance": "64.8 km",
+      "duration": "13 hours 41 mins"
+    },
+    {
+      "username": "petrakumi",
+      "id": "3Z7WXb3",
+      "placeFrom": "Boston",
+      "placeTo": "worcester ma",
+      "mode": "driving",
+      "returnval": "No",
+      "distance": "76.3 km",
+      "duration": "55 mins"
+    },
+    {
+      "username": "petrakumi",
+      "id": "kKBVzr3",
+      "placeFrom": "boston logan",
+      "placeTo": "jfk airport",
+      "mode": "driving",
+      "returnval": "No",
+      "distance": "345 km",
+      "duration": "3 hours 34 mins"
+    }
+  ],
+  "users": [
+    {
+      "firstname": "Petra",
+      "lastname": "Kumi",
+      "username": "petrakumi",
+      "pass": "petra"
+    },
+    {
+      "firstname": "Kit",
+      "lastname": "Zeller",
+      "username": "kitkat",
+      "pass": "secret"
+    },
+    {
+      "firstname": "Ema",
+      "lastname": "Kumi",
+      "username": "emakumi",
+      "pass": "ema"
+    },
+    {
+      "firstname": "Manas",
+      "lastname": "Mehta",
+      "username": "manasmehta",
+      "pass": "manas"
+    },
+    {
+      "username": "pkumi@wpi.edu/linkedin",
+      "firstname": "Petra",
+      "lastname": "Kumi",
+      "pass": ""
+    },
+    {
+      "username": "petrakumi12/github",
+      "firstName": "petrakumi12",
+      "lastName": "petrakumi12",
+      "pass": ""
+    },
+    {
+      "username": "petrakumi12/github",
+      "firstName": "petrakumi12",
+      "lastName": "petrakumi12",
+      "pass": ""
+    }
+  ]
+}
