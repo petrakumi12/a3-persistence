@@ -1,7 +1,6 @@
 'use strict'
 
 const express = require('express'), app = express(),
-    anime = require('animejs'),
     path = require('path'),
     session = require('express-session'),
     passport = require('passport'),
