@@ -1,0 +1,43 @@
+{
+  "name": "myApp",
+  "version": "1.0.0",
+  "description": "Assignment 3 - Persistence: Two-tier Web Application with Flat File Database, Express server, and CSS template\r ===",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrakumi12/a3-persistence.git"
+  },
+  "author": "Petra Kumi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petrakumi12/a3-persistence/issues"
+  },
+  "dependencies": {
+    "@google/maps": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.2",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "mdbootstrap": "^4.8.9",
+    "passport": "^0.4.0",
+    "passport-github": "^1.1.0",
+    "passport-github2": "^0.1.11",
+    "passport-linkedin-oauth2": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-oauth": "^1.0.0",
+    "shortid": "^2.2.15"
+  },
+  "homepage": "https://github.com/petrakumi12/a3-persistence#readme",
+  "devDependencies": {
+    "animejs": "^3.1.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.7.1"
+  }
+}
