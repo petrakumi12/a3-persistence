@@ -13,16 +13,11 @@ const login = function(e){
     //preventdefault
     //check if inputs are all filled in
     if(checkLoginInputsFilled()){
-
         //if yes then request from db user with this un and pass
         //if exists then move to new page
         //if doesnt exist then say it doesnt exist
         onLoginSuccessful();
-
     }
-    // else {
-    //     //if not say something
-    // }
 };
 
 
@@ -94,7 +89,6 @@ function checkLoginInputsFilled(){
 function onLoginSuccessful(){
     let username = document.querySelector("#usernameLogIn").value;
     let pass = document.querySelector("#passwordLogIn").value;
-    // let url = '/login?username='+username+'&pass='+pass;
     let a = {
         "username" : username,
         "pass" : pass
@@ -139,5 +133,5 @@ function animateText() {
                 duration: 2200,
                 delay: (el, i) => 700 + 30 * i
             });
-    }, 1000);
+    }, 0);
 }

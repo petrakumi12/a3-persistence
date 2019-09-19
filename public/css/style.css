@@ -127,7 +127,8 @@ body{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    color: ghostwhite;
+    color: rgb(0, 182, 201);
+    -webkit-text-stroke: 0.5px black;
 }
 
 .ml12 .letter {

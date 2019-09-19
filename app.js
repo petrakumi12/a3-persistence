@@ -45,7 +45,7 @@ passport.deserializeUser(function (user, done) {
 
 
 app.get('/', function (req, res) {
-    res.sendFile('/public/index.html');
+    res.sendFile(__dirname+'/index.html');
 });
 
 
